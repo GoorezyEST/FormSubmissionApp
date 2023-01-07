@@ -179,7 +179,7 @@ const Form = () => {
         {template.items[5].label}
       </button>
       <Link to="/answer" className="linkToAnswer">
-        {submitted ? "Mira tus respuestas" : "Example"}
+        {submitted ? "Mira tus respuestas" : ""}
       </Link>
     </form>
   );
