@@ -1,0 +1,288 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  background-image: url("../assets/liquid-texture.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.form {
+  min-width: 30vw;
+  min-height: 80vh;
+  background: rgba(69, 115, 124, 0.5);
+  border-width: 1px 0px;
+  border-style: solid;
+  border-color: #ffffff;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1rem 2rem 2rem 2rem;
+}
+
+.form h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 1);
+}
+
+.inputText {
+  display: flex;
+  width: 90%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.inputContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  position: absolute;
+  fill: rgba(255, 255, 255, 1);
+  margin-bottom: 2px;
+}
+
+.inputContainer input {
+  background: transparent;
+  border-width: 0px 0px 0.5px 0px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 0.2rem 0.2rem 0.2rem 1.5rem;
+  color: #ffffff;
+  cursor: text;
+}
+
+.inputText input:focus {
+  outline: none;
+}
+
+.inputText input::placeholder {
+  color: rgba(255, 255, 255, 1);
+}
+
+.inputText label {
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.inputDate::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+.selectContainer {
+  display: flex;
+  width: 90%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.selectContainer label {
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.inputSelectContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.selectInput {
+  width: 100%;
+  background: transparent;
+  border-width: 0px 0px 0.5px 0px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 0.2rem 0.2rem 0.2rem 1.25rem;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.selectInput:focus {
+  outline: none;
+}
+
+.options {
+  color: #ffffff;
+  font-weight: 300;
+  background-color: rgba(69, 115, 124, 0.75);
+  font-size: 0.85rem;
+}
+
+.termsContent {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 85%;
+}
+
+.termsContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.termsLabel {
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.termsInput {
+  width: 0.75rem;
+  height: 0.75rem;
+  cursor: pointer;
+}
+
+.btn {
+  width: 90%;
+  padding: 0.5rem 0px;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 16px;
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.85);
+  color: rgba(69, 115, 124, 1);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.btn:disabled {
+  width: 90%;
+  padding: 0.5rem 0px;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 16px;
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.25);
+  color: rgba(69, 115, 124, 1);
+  cursor: pointer;
+  cursor: not-allowed;
+}
+
+.btn-loading {
+  width: 90%;
+  padding: 0.5rem 0px;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 16px;
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.25);
+  color: rgba(69, 115, 124, 0.5);
+  cursor: not-allowed;
+}
+
+.linkToAnswer {
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.75);
+  position: absolute;
+  bottom: 0.8rem;
+  transition: all 0.2s;
+  background-color: transparent;
+  border-radius: 16px;
+  border: none;
+  padding: 0.25rem 0.75rem;
+}
+
+.linkToAnswer:hover {
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(69, 115, 124, 0.5);
+}
+
+.error_text {
+  font-size: 0.75rem;
+  font-weight: 300;
+  color: rgb(121, 17, 17);
+}
+
+@media screen and (max-width: 450px) {
+  .form h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 1);
+  }
+
+  .termsLabel {
+    font-size: 0.6rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.75);
+  }
+}
+
+@media screen and (max-width: 350px) {
+  body {
+    padding: 1rem;
+  }
+
+  .form h1 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 1);
+  }
+
+  .inputContainer input {
+    font-size: 0.85rem;
+  }
+  .inputText label {
+    font-size: 0.5rem;
+  }
+
+  .selectContainer label {
+    font-size: 0.5rem;
+  }
+  .selectInput {
+    font-size: 0.85rem;
+  }
+
+  .termsLabel {
+    font-size: 0.45rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.75);
+  }
+}
+
+@media screen and (max-width: 275px) {
+  .form {
+    padding: 0.5rem 1rem 1rem 1rem;
+  }
+}
