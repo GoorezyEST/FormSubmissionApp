@@ -235,11 +235,26 @@ body {
   color: rgb(121, 17, 17);
 }
 
+@media screen and (max-width: 700px) {
+  body {
+    padding: 1rem;
+  }
+
+  .form {
+    height: 700px;
+    width: 400px;
+  }
+}
+
 @media screen and (max-width: 450px) {
-  .form h1 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: rgba(255, 255, 255, 1);
+  .form {
+    height: 700px;
+    width: 350px;
+  }
+  .termsLabel {
+    font-size: 0.45rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.75);
   }
 
   .termsLabel {
@@ -249,40 +264,9 @@ body {
   }
 }
 
-@media screen and (max-width: 350px) {
-  body {
-    padding: 1rem;
-  }
-
-  .form h1 {
-    font-size: 1rem;
-    font-weight: 600;
-    color: rgba(255, 255, 255, 1);
-  }
-
-  .inputContainer input {
-    font-size: 0.85rem;
-  }
-  .inputText label {
-    font-size: 0.5rem;
-  }
-
-  .selectContainer label {
-    font-size: 0.5rem;
-  }
-  .selectInput {
-    font-size: 0.85rem;
-  }
-
-  .termsLabel {
-    font-size: 0.45rem;
-    font-weight: 300;
-    color: rgba(255, 255, 255, 0.75);
-  }
-}
-
-@media screen and (max-width: 275px) {
+@media screen and (max-width: 400px) {
   .form {
-    padding: 0.5rem 1rem 1rem 1rem;
+    height: 700px;
+    width: 300px;
   }
 }

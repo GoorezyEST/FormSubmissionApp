@@ -47,7 +47,7 @@ const Form = () => {
   return (
     <form className="form" onSubmit={handleSubmit(submittedForm)}>
       <h1>
-        {window.matchMedia("(min-width: 300px)").matches
+        {window.matchMedia("(min-width: 610px)").matches
           ? "GreyDive - Challenge"
           : "GreyDive"}
       </h1>

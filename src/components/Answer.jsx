@@ -15,12 +15,8 @@ function Answer() {
 
   if (!data) {
     return (
-      <div className="loader">
-        <div className="loading">
-          <div className="arc one"></div>
-          <div className="arc two"></div>
-          <div className="arc three"></div>
-        </div>
+      <div className="loading">
+        <span className="loader"></span>
       </div>
     );
   }
@@ -47,7 +43,7 @@ function Answer() {
         <span>Nacionalidad :</span>
         <p>{data.country.charAt(0).toUpperCase() + data.country.slice(1)}</p>
       </div>
-      <div className="data">
+      <div className="data_form">
         <Link to="../" className="linkToForm">
           Regresar
         </Link>
