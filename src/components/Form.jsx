@@ -62,6 +62,7 @@ const Form = () => {
               required: template.items[0].required,
               minLength: 3,
               maxLength: 40,
+              pattern: /^[a-zA-Z]+$/,
             })}
           />
         </div>
@@ -76,6 +77,11 @@ const Form = () => {
         {formState.errors.name?.type === "minLength" && (
           <p className="error_text">
             El nombre no puede contener menos de 3 caracteres.
+          </p>
+        )}
+        {formState.errors.name?.type === "pattern" && (
+          <p className="error_text">
+            No puedes ingresar numeros o caracteres especiales.
           </p>
         )}
       </div>
