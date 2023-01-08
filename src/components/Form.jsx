@@ -7,12 +7,9 @@ import { HiCalendar, HiGlobeAlt, HiUser, HiMail } from "react-icons/hi";
 import { useForm } from "react-hook-form";
 
 const Form = () => {
-  const {
-    register,
-    formState: { errors },
-    reset,
-    handleSubmit,
-  } = useForm();
+  const { register, formState, reset, handleSubmit } = useForm({
+    mode: "onTouched",
+  });
 
   const [loader, setLoader] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -60,18 +57,25 @@ const Form = () => {
             type={template.items[0].type}
             name={template.items[0].name}
             placeholder="Nombre..."
+            ref={register}
             {...register("name", {
               required: template.items[0].required,
+              minLength: 3,
               maxLength: 40,
             })}
           />
         </div>
-        {errors.name?.type === "required" && (
+        {formState.errors.name?.type === "required" && (
           <p className="error_text">Este campo es requerido.</p>
         )}
-        {errors.name?.type === "maxLength" && (
+        {formState.errors.name?.type === "maxLength" && (
           <p className="error_text">
             El nombre no puede contener mas de 40 caracteres.
+          </p>
+        )}
+        {formState.errors.name?.type === "minLength" && (
+          <p className="error_text">
+            El nombre no puede contener menos de 3 caracteres.
           </p>
         )}
       </div>
@@ -91,10 +95,10 @@ const Form = () => {
             })}
           />
         </div>
-        {errors.email?.type === "required" && (
+        {formState.errors.email?.type === "required" && (
           <p className="error_text">Este campo es requerido.</p>
         )}
-        {errors.email?.type === "pattern" && (
+        {formState.errors.email?.type === "pattern" && (
           <p className="error_text">El formato del email es invalido.</p>
         )}
       </div>
@@ -121,10 +125,10 @@ const Form = () => {
             })}
           />
         </div>
-        {errors.birthdate?.type === "required" && (
+        {formState.errors.birthdate?.type === "required" && (
           <p className="error_text">Este campo es requerido.</p>
         )}
-        {errors.birthdate?.type === "validate" && (
+        {formState.errors.birthdate?.type === "validate" && (
           <p className="error_text">Debes ser mayor de 18 años.</p>
         )}
       </div>
@@ -150,7 +154,7 @@ const Form = () => {
             ))}
           </select>
         </div>
-        {errors.nationality?.type === "required" && (
+        {formState.errors.nationality?.type === "required" && (
           <p className="error_text">Este campo es requerido.</p>
         )}
       </div>
@@ -167,7 +171,7 @@ const Form = () => {
           />
           <label className="termsLabel">{template.items[4].label}</label>
         </div>
-        {errors.checkbox?.type === "required" && (
+        {formState.errors.checkbox?.type === "required" && (
           <p className="error_text">Este campo es requerido.</p>
         )}
       </div>
