@@ -1,5 +1,6 @@
 body {
   min-height: 100vh;
+  max-height: 100vh;
   display: flex;
   flex-wrap: wrap;
   align-content: center;
@@ -53,6 +54,7 @@ body {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  word-break: break-all;
   line-height: 1.25rem;
 }
 
@@ -97,28 +99,28 @@ body {
 
 @media screen and (max-width: 700px) {
   .data_container {
-    height: 600px;
+    height: 500px;
     width: 500px;
   }
 }
 
 @media screen and (max-width: 600px) {
   .data_container {
-    height: 600px;
+    height: 500px;
     width: 400px;
   }
 }
 
 @media screen and (max-width: 450px) {
   .data_container {
-    height: 600px;
+    height: 500px;
     width: 350px;
   }
 }
 
 @media screen and (max-width: 400px) {
   .data_container {
-    height: 600px;
+    height: 500px;
     width: 300px;
   }
 }

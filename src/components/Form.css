@@ -241,14 +241,14 @@ body {
   }
 
   .form {
-    height: 700px;
+    height: 600px;
     width: 400px;
   }
 }
 
 @media screen and (max-width: 450px) {
   .form {
-    height: 700px;
+    height: 600px;
     width: 350px;
   }
   .termsLabel {
@@ -266,7 +266,7 @@ body {
 
 @media screen and (max-width: 400px) {
   .form {
-    height: 700px;
+    height: 600px;
     width: 300px;
   }
 }
